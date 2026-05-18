@@ -9,6 +9,6 @@ data class ProductModelResponse(
     @SerializedName("title")
     val title: String,
 
-    @SerializedName("image")
+    @SerializedName("images")
     val image:String
 )
