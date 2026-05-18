@@ -31,16 +31,17 @@
             android:id="@+id/etName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:layout_gravity="center"
-            android:hint="Nombre artículo"
+            android:layout_marginTop="16dp"
             android:background="@drawable/bg_redondo"
-            android:padding="12dp"
+            android:hint="Nombre artículo"
             android:inputType="text"
             android:maxLength="10"
-            app:layout_constraintTop_toBottomOf="@id/tvNameAdd"
+            android:padding="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintTop_toBottomOf="@id/tvNameAdd" />
 
         <EditText
             android:id="@+id/etPrice"

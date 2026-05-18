@@ -33,8 +33,6 @@ class AddItemFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         controladores()
         observerViewModel()
-
-
     }
 
     private fun controladores() {
@@ -50,7 +48,7 @@ class AddItemFragment : Fragment() {
         val quantity = binding.etQuantity.text.toString().toInt()
         val inventory = Inventory(name = name, price = price, quantity = quantity)
         inventoryViewModel.saveInventory(inventory)
-        Log.d("test",inventory.toString())
+        Log.d("testWalter",inventory.toString())
         Toast.makeText(context,"Artículo guardado !!", Toast.LENGTH_SHORT).show()
         findNavController().popBackStack()
 
@@ -80,11 +78,10 @@ class AddItemFragment : Fragment() {
         inventoryViewModel.getProducts()
         inventoryViewModel.listProducts.observe(viewLifecycleOwner){ lista ->
 
-            val product = lista[2]
-            Glide.with(binding.root.context).load(product.id).into(binding.ivImagenApi)
+            val product = lista[0]
+            Glide.with(binding.root.context).load(product.image).into(binding.ivImagenApi)
             binding.tvTitleProduct.text = product.title
         }
     }
-
 
 }

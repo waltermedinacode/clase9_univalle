@@ -15,7 +15,6 @@ class InventoryViewModel(application: Application) : AndroidViewModel(applicatio
     val context = getApplication<Application>()
     private val inventoryRepository = InventoryRepository(context)
 
-
     private val _listInventory = MutableLiveData<MutableList<Inventory>>()
     val listInventory: LiveData<MutableList<Inventory>> get() = _listInventory
 
